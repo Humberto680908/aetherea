@@ -1,0 +1,37 @@
+/* ============================================
+   pillars.css — los seis pilares cósmicos
+   ============================================ */
+
+.pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px 24px;
+}
+
+.pillar {
+  border-top: 1px solid rgba(var(--accent-rgb), 0.25);
+  padding-top: 22px;
+  transition: border-top-color 0.35s;
+}
+
+.pillar:hover {
+  border-top-color: var(--color-accent);
+}
+
+.pillar__glyph {
+  font-family: 'Apple Symbols', 'Segoe UI Symbol', 'Noto Sans Symbols', sans-serif;
+  font-size: 26px;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+  text-shadow: 0 0 22px rgba(212, 176, 120, 0.45);
+}
+
+.pillar h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.pillar p {
+  font-size: 14px;
+  color: var(--color-text-dim);
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AETHEREA · Tarot, Carta Natal y Astrología</title>
+<meta name="description" content="AETHEREA — lecturas de tarot, cartas natales, calendario lunar y consultas astrológicas. Orientación honesta bajo un cielo en movimiento.">
+
+<!-- Open Graph: cómo se ve la página al compartirla -->
+<meta property="og:title" content="AETHEREA · Tarot, Carta Natal y Astrología">
+<meta property="og:description" content="El universo habla. ¿Estás escuchando? Lecturas honestas bajo un sistema solar 3D en movimiento.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- TODO al publicar: convertir og:image en URL absoluta y añadir og:url con el dominio real -->
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2305050d'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8673a'%3E%E2%9C%B6%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/pillars.css">
+<link rel="stylesheet" href="css/zodiac.css">
+<link rel="stylesheet" href="css/moon.css">
+<link rel="stylesheet" href="css/process.css">
+<link rel="stylesheet" href="css/testimonials.css">
+<link rel="stylesheet" href="css/booking.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/sign-modal.css">
+<link rel="stylesheet" href="css/discover.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <a class="site-nav__brand" href="#inicio">
+    <span class="site-nav__logo">✶</span>
+    AETHEREA
+  </a>
+  <div class="site-nav__links">
+    <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="#pilares" data-es="Pilares" data-en="Pillars">Pilares</a>
+    <a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a>
+  </div>
+  <div class="site-nav__actions">
+    <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Idioma">
+      <button type="button" data-lang="es" class="is-active">ES</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn--small" href="#reservar" data-es="Agenda tu lectura" data-en="Book your reading">Agenda tu lectura</a>
+    <button type="button" class="site-nav__burger" id="nav-burger" aria-label="Menú" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero__scene" id="hero-scene" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="kicker" data-es="Tarot · Carta natal · Calendario lunar · Astrología" data-en="Tarot · Birth chart · Lunar calendar · Astrology">Tarot · Carta natal · Calendario lunar · Astrología</p>
+      <h1 class="hero__title" data-es="El universo habla.&lt;br&gt;&lt;em&gt;¿Estás escuchando?&lt;/em&gt;" data-en="The universe speaks.&lt;br&gt;&lt;em&gt;Are you listening?&lt;/em&gt;">El universo habla.<br><em>¿Estás escuchando?</em></h1>
+      <p class="hero__lead" data-es="Lecturas de tarot, cartas natales y consultas astrológicas con un enfoque sobrio y honesto: símbolos y ciclos como herramientas de orientación, no promesas. El cielo que orbita ante ti es real — y es el punto de partida de cada sesión." data-en="Tarot readings, birth charts and astrological consultations with a sober, honest approach: symbols and cycles as tools for reflection, not promises. The sky orbiting before you is real — and it is where every session begins.">Lecturas de tarot, cartas natales y consultas astrológicas con un enfoque sobrio y honesto: símbolos y ciclos como herramientas de orientación, no promesas. El cielo que orbita ante ti es real — y es el punto de partida de cada sesión.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#reservar" data-es="Agenda tu lectura" data-en="Book your reading">Agenda tu lectura</a>
+        <a class="btn btn--ghost" href="#servicios" data-es="Ver servicios" data-en="View services">Ver servicios</a>
+      </div>
+    </div>
+    <p class="hero__hint" data-es="Arrastra para orbitar · El cielo que ves es real: 8 planetas, datos reales" data-en="Drag to orbit · This sky is real: 8 planets, real data">Arrastra para orbitar · El cielo que ves es real: 8 planetas, datos reales</p>
+  </section>
+
+  <section class="services" id="servicios">
+    <header class="section-head reveal">
+      <p class="kicker" data-es="Servicios" data-en="Services">Servicios</p>
+      <h2 data-es="Cuatro formas de leer el cielo" data-en="Four ways to read the sky">Cuatro formas de leer el cielo</h2>
+    </header>
+    <div class="services__grid">
+      <article class="service-card reveal">
+        <span class="service-card__num">01</span>
+        <div class="service-card__symbol">✶</div>
+        <h3 data-es="Lectura de Tarot" data-en="Tarot Reading">Lectura de Tarot</h3>
+        <p data-es="78 cartas: 22 arcanos mayores y 56 menores. Una tirada para ordenar una pregunta concreta y mirar tus opciones con perspectiva. Orientación, no predicción." data-en="78 cards: 22 major and 56 minor arcana. A spread to frame a specific question and look at your options with perspective. Guidance, not prediction.">78 cartas: 22 arcanos mayores y 56 menores. Una tirada para ordenar una pregunta concreta y mirar tus opciones con perspectiva. Orientación, no predicción.</p>
+        <div class="service-card__meta">
+          <span>45 min</span><span class="service-card__price">35 €</span>
+        </div>
+        <a class="service-card__link" href="#reservar"><span data-es="Solicitar lectura" data-en="Request a reading">Solicitar lectura</span> <span class="service-card__arrow">→</span></a>
+      </article>
+      <article class="service-card service-card--featured reveal">
+        <span class="service-card__num">02</span>
+        <div class="service-card__symbol">☉</div>
+        <h3 data-es="Carta Natal" data-en="Birth Chart">Carta Natal</h3>
+        <p data-es="El mapa del cielo en el instante de tu nacimiento. Tu Big Three —Sol, Luna y ascendente—, casas y aspectos, interpretados en sesión y con informe escrito." data-en="The map of the sky at the moment of your birth. Your Big Three —Sun, Moon and rising sign—, houses and aspects, interpreted live and delivered as a written report.">El mapa del cielo en el instante de tu nacimiento. Tu Big Three —Sol, Luna y ascendente—, casas y aspectos, interpretados en sesión y con informe escrito.</p>
+        <div class="service-card__meta">
+          <span>75 min</span><span class="service-card__price">60 €</span>
+        </div>
+        <a class="service-card__link" href="#reservar"><span data-es="Solicitar lectura" data-en="Request a reading">Solicitar lectura</span> <span class="service-card__arrow">→</span></a>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-card__num">03</span>
+        <div class="service-card__symbol">☽</div>
+        <h3 data-es="Calendario Lunar" data-en="Lunar Calendar">Calendario Lunar</h3>
+        <p data-es="El ciclo lunar dura 29,5 días y recorre 8 fases. Un calendario personalizado del mes: qué fase acompaña qué intención, para planificar con el ritmo de la Luna." data-en="The lunar cycle lasts 29.5 days across 8 phases. A personalised month calendar: which phase supports which intention, so you can plan with the Moon's rhythm.">El ciclo lunar dura 29,5 días y recorre 8 fases. Un calendario personalizado del mes: qué fase acompaña qué intención, para planificar con el ritmo de la Luna.</p>
+        <div class="service-card__meta">
+          <span>30 min</span><span class="service-card__price">25 €</span>
+        </div>
+        <a class="service-card__link" href="#reservar"><span data-es="Solicitar lectura" data-en="Request a reading">Solicitar lectura</span> <span class="service-card__arrow">→</span></a>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-card__num">04</span>
+        <div class="service-card__symbol">☿</div>
+        <h3 data-es="Consulta Astrológica" data-en="Astrology Consultation">Consulta Astrológica</h3>
+        <p data-es="Tránsitos actuales sobre tu carta, compatibilidad y preguntas concretas. Por videollamada, con resumen posterior para que nada se quede en el aire." data-en="Current transits over your chart, compatibility and specific questions. Via video call, with a follow-up summary so nothing is left hanging.">Tránsitos actuales sobre tu carta, compatibilidad y preguntas concretas. Por videollamada, con resumen posterior para que nada se quede en el aire.</p>
+        <div class="service-card__meta">
+          <span>60 min</span><span class="service-card__price">50 €</span>
+        </div>
+        <a class="service-card__link" href="#reservar"><span data-es="Solicitar lectura" data-en="Request a reading">Solicitar lectura</span> <span class="service-card__arrow">→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="pillars" id="pilares">
+    <header class="section-head reveal">
+      <p class="kicker" data-es="Pilares cósmicos" data-en="Cosmic pillars">Pilares cósmicos</p>
+      <h2 data-es="El material con el que trabajamos" data-en="The material we work with">El material con el que trabajamos</h2>
+    </header>
+    <div class="pillars__grid">
+      <article class="pillar reveal">
+        <div class="pillar__glyph">✦</div>
+        <h3 data-es="Tarot" data-en="Tarot">Tarot</h3>
+        <p data-es="78 cartas: 22 arcanos mayores que narran arquetipos universales y 56 menores en cuatro palos —Copas, Espadas, Bastos y Oros— que hablan de lo cotidiano." data-en="78 cards: 22 major arcana narrating universal archetypes and 56 minor cards in four suits —Cups, Swords, Wands and Pentacles— speaking to everyday life.">78 cartas: 22 arcanos mayores que narran arquetipos universales y 56 menores en cuatro palos —Copas, Espadas, Bastos y Oros— que hablan de lo cotidiano.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__glyph">♈&#xFE0E;</div>
+        <h3 data-es="Zodiaco" data-en="Zodiac">Zodiaco</h3>
+        <p data-es="12 signos organizados en 4 elementos —fuego, tierra, aire y agua— y 3 modalidades: cardinal, fija y mutable. Una gramática de temperamentos." data-en="12 signs organised into 4 elements —fire, earth, air and water— and 3 modalities: cardinal, fixed and mutable. A grammar of temperaments.">12 signos organizados en 4 elementos —fuego, tierra, aire y agua— y 3 modalidades: cardinal, fija y mutable. Una gramática de temperamentos.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__glyph">☽</div>
+        <h3 data-es="Luna" data-en="Moon">Luna</h3>
+        <p data-es="El ciclo lunar completo dura 29,5 días y atraviesa 8 fases. Cada fase acompaña una energía distinta: de la siembra de la luna nueva al cierre de la menguante." data-en="A full lunar cycle lasts 29.5 days across 8 phases. Each phase carries a different energy: from the seeding of the new moon to the release of the waning crescent.">El ciclo lunar completo dura 29,5 días y atraviesa 8 fases. Cada fase acompaña una energía distinta: de la siembra de la luna nueva al cierre de la menguante.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__glyph">✴</div>
+        <h3 data-es="Constelaciones" data-en="Constellations">Constelaciones</h3>
+        <p data-es="88 constelaciones reconocidas oficialmente. 12 forman el zodiaco; el resto —como Orión o Cetus— completa el mapa con el que la humanidad ha leído la noche." data-en="88 officially recognised constellations. 12 form the zodiac; the rest —like Orion or Cetus— complete the map humanity has used to read the night.">88 constelaciones reconocidas oficialmente. 12 forman el zodiaco; el resto —como Orión o Cetus— completa el mapa con el que la humanidad ha leído la noche.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__glyph">♄</div>
+        <h3 data-es="Planetas" data-en="Planets">Planetas</h3>
+        <p data-es="La lectura astrológica trabaja con 10 cuerpos: Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno y Plutón. Cada uno rige un área de la vida." data-en="Astrological reading works with 10 bodies: Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto. Each governs an area of life.">La lectura astrológica trabaja con 10 cuerpos: Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno y Plutón. Cada uno rige un área de la vida.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__glyph">☉</div>
+        <h3 data-es="Carta Astral" data-en="Birth Chart">Carta Astral</h3>
+        <p data-es="Tu Big Three: el Sol (la esencia), la Luna (el mundo emocional) y el ascendente (la forma en que el mundo te percibe). El punto de partida de toda interpretación." data-en="Your Big Three: the Sun (essence), the Moon (emotional world) and the rising sign (how the world perceives you). The starting point of any interpretation.">Tu Big Three: el Sol (la esencia), la Luna (el mundo emocional) y el ascendente (la forma en que el mundo te percibe). El punto de partida de toda interpretación.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="zodiac" id="zodiaco" aria-label="Signos del zodiaco">
+    <div class="zodiac__viewport">
+      <div class="zodiac__track" id="zodiac-track"></div>
+    </div>
+  </section>
+
+  <section class="discover" id="tu-signo">
+    <div class="discover__panel reveal">
+      <header class="section-head section-head--center">
+        <p class="kicker" data-es="Pruébalo ahora" data-en="Try it now">Pruébalo ahora</p>
+        <h2 data-es="¿Cuál es tu signo solar?" data-en="What is your sun sign?">¿Cuál es tu signo solar?</h2>
+        <p class="discover__sub" data-es="Introduce tu fecha de nacimiento y míralo al instante — gratis, sin registrarte." data-en="Enter your date of birth and see it instantly — free, no sign-up.">Introduce tu fecha de nacimiento y míralo al instante — gratis, sin registrarte.</p>
+      </header>
+      <form class="discover__form" id="sign-calc-form">
+        <input type="date" name="fecha" required aria-label="Fecha de nacimiento">
+        <button class="btn" type="submit" data-es="Ver mi signo" data-en="See my sign">Ver mi signo</button>
+      </form>
+      <div class="sign-result" id="sign-result" hidden></div>
+    </div>
+  </section>
+
+  <section class="moon" id="fases">
+    <header class="section-head section-head--center reveal">
+      <p class="kicker" data-es="Fases lunares" data-en="Moon phases">Fases lunares</p>
+      <h2 data-es="El ritmo que marca la Luna" data-en="The rhythm the Moon sets">El ritmo que marca la Luna</h2>
+      <p class="moon__today" id="moon-today"></p>
+      <p class="moon__hint" data-es="Toca una fase para conocer su significado" data-en="Tap a phase to learn its meaning">Toca una fase para conocer su significado</p>
+    </header>
+    <div class="moon__grid">
+      <article class="moon-phase reveal" data-phase="nueva" tabindex="0" role="button">
+        <div class="moon-phase__icon">🌑</div>
+        <h3 data-es="Luna Nueva" data-en="New Moon">Luna Nueva</h3>
+        <p data-es="Inicios e intenciones: el momento de sembrar." data-en="Beginnings and intentions: the time to plant.">Inicios e intenciones: el momento de sembrar.</p>
+      </article>
+      <article class="moon-phase reveal" data-phase="creciente" tabindex="0" role="button">
+        <div class="moon-phase__icon">🌓</div>
+        <h3 data-es="Cuarto Creciente" data-en="First Quarter">Cuarto Creciente</h3>
+        <p data-es="Acción y empuje: superar los primeros obstáculos." data-en="Action and momentum: overcoming the first obstacles.">Acción y empuje: superar los primeros obstáculos.</p>
+      </article>
+      <article class="moon-phase reveal" data-phase="llena" tabindex="0" role="button">
+        <div class="moon-phase__icon">🌕</div>
+        <h3 data-es="Luna Llena" data-en="Full Moon">Luna Llena</h3>
+        <p data-es="Culminación: ver con claridad lo que se ha manifestado." data-en="Culmination: seeing clearly what has come to light.">Culminación: ver con claridad lo que se ha manifestado.</p>
+      </article>
+      <article class="moon-phase reveal" data-phase="menguante" tabindex="0" role="button">
+        <div class="moon-phase__icon">🌗</div>
+        <h3 data-es="Cuarto Menguante" data-en="Last Quarter">Cuarto Menguante</h3>
+        <p data-es="Liberación y limpieza: cerrar el ciclo antes de volver a empezar." data-en="Release and clearing: closing the cycle before starting again.">Liberación y limpieza: cerrar el ciclo antes de volver a empezar.</p>
+      </article>
+    </div>
+    <div class="moon-detail" id="moon-detail" hidden></div>
+  </section>
+
+  <section class="process" id="proceso">
+    <header class="section-head reveal">
+      <p class="kicker" data-es="Proceso" data-en="Process">Proceso</p>
+      <h2 data-es="Cómo funciona una sesión" data-en="How a session works">Cómo funciona una sesión</h2>
+    </header>
+    <ol class="process__steps">
+      <li class="process__step reveal">
+        <span class="process__num">01</span>
+        <h3 data-es="Agenda tu sesión" data-en="Book your session">Agenda tu sesión</h3>
+        <p data-es="Completa el formulario con tus datos de nacimiento y el tipo de lectura que buscas." data-en="Fill in the form with your birth details and the type of reading you are looking for.">Completa el formulario con tus datos de nacimiento y el tipo de lectura que buscas.</p>
+      </li>
+      <li class="process__step reveal">
+        <span class="process__num">02</span>
+        <h3 data-es="Confirmación y preparación" data-en="Confirmation &amp; preparation">Confirmación y preparación</h3>
+        <p data-es="En menos de 24 h recibes la confirmación. Antes de la sesión, tu carta queda levantada o el mazo preparado." data-en="You receive confirmation within 24 h. Before the session, your chart is drawn up or the deck prepared.">En menos de 24 h recibes la confirmación. Antes de la sesión, tu carta queda levantada o el mazo preparado.</p>
+      </li>
+      <li class="process__step reveal">
+        <span class="process__num">03</span>
+        <h3 data-es="Tu lectura y reporte" data-en="Your reading &amp; report">Tu lectura y reporte</h3>
+        <p data-es="En vivo o por escrito, según prefieras. Siempre con un reporte en PDF para releer con calma." data-en="Live or in writing, as you prefer. Always with a PDF report to revisit at your own pace.">En vivo o por escrito, según prefieras. Siempre con un reporte en PDF para releer con calma.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="testimonials" id="testimonios">
+    <header class="section-head reveal">
+      <p class="kicker" data-es="Testimonios" data-en="Testimonials">Testimonios</p>
+      <h2 data-es="Lo que cuentan después" data-en="What they say afterwards">Lo que cuentan después</h2>
+      <p class="testimonials__note" data-es="Testimonios ilustrativos." data-en="Illustrative testimonials.">Testimonios ilustrativos.</p>
+    </header>
+    <div class="testimonials__grid">
+      <blockquote class="testimonial reveal">
+        <p data-es="«La carta natal puso palabras a cosas que intuía hace años. El informe escrito es lo que más valoro: lo releo cada pocos meses.»" data-en="“The birth chart put into words things I had sensed for years. The written report is what I value most: I reread it every few months.”">«La carta natal puso palabras a cosas que intuía hace años. El informe escrito es lo que más valoro: lo releo cada pocos meses.»</p>
+        <footer data-es="— Marina G. · Escorpio · Carta natal" data-en="— Marina G. · Scorpio · Birth chart">— Marina G. · Escorpio · Carta natal</footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <p data-es="«Llegué con una decisión atascada y salí con las opciones ordenadas. No me dijo qué hacer — me ayudó a ver qué estaba eligiendo.»" data-en="“I arrived with a stuck decision and left with my options laid out. She didn't tell me what to do — she helped me see what I was choosing.”">«Llegué con una decisión atascada y salí con las opciones ordenadas. No me dijo qué hacer — me ayudó a ver qué estaba eligiendo.»</p>
+        <footer data-es="— Daniel R. · Tauro · Tarot" data-en="— Daniel R. · Taurus · Tarot">— Daniel R. · Tauro · Tarot</footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <p data-es="«La consulta de tránsitos, con los planetas moviéndose en pantalla, hizo tangible algo que siempre me había parecido abstracto.»" data-en="“The transit consultation, with the planets moving on screen, made tangible something that had always felt abstract to me.”">«La consulta de tránsitos, con los planetas moviéndose en pantalla, hizo tangible algo que siempre me había parecido abstracto.»</p>
+        <footer data-es="— Lucía P. · Libra · Consulta astrológica" data-en="— Lucía P. · Libra · Astrology consultation">— Lucía P. · Libra · Consulta astrológica</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="booking" id="reservar">
+    <div class="booking__panel reveal">
+      <header class="section-head">
+        <p class="kicker" data-es="Agenda" data-en="Booking">Agenda</p>
+        <h2 data-es="Agenda tu lectura" data-en="Book your reading">Agenda tu lectura</h2>
+        <p class="booking__note" data-es="Cuéntame qué buscas y te respondo en menos de 24 h con los próximos horarios. Sesiones online o presenciales." data-en="Tell me what you are looking for and I will reply within 24 h with the next available slots. Sessions online or in person.">Cuéntame qué buscas y te respondo en menos de 24 h con los próximos horarios. Sesiones online o presenciales.</p>
+        <p class="booking__urgency" id="booking-urgency"></p>
+      </header>
+      <form class="booking__form" id="booking-form" novalidate>
+        <div class="form-row">
+          <label class="form-field">
+            <span data-es="Nombre" data-en="Name">Nombre</span>
+            <input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" data-ph-es="Tu nombre" data-ph-en="Your name">
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="tu@correo.com" data-ph-es="tu@correo.com" data-ph-en="you@email.com">
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="form-field">
+            <span data-es="Fecha de nacimiento" data-en="Date of birth">Fecha de nacimiento</span>
+            <input type="date" name="nacimiento" required autocomplete="bday">
+          </label>
+          <label class="form-field">
+            <span data-es="Tipo de lectura" data-en="Type of reading">Tipo de lectura</span>
+            <select name="lectura" required>
+              <option value="" data-es="Elige una opción…" data-en="Choose an option…">Elige una opción…</option>
+              <option value="tarot" data-es="Lectura de Tarot · 45 min · 35 €" data-en="Tarot Reading · 45 min · €35">Lectura de Tarot · 45 min · 35 €</option>
+              <option value="natal" data-es="Carta Natal · 75 min · 60 €" data-en="Birth Chart · 75 min · €60">Carta Natal · 75 min · 60 €</option>
+              <option value="lunar" data-es="Calendario Lunar · 30 min · 25 €" data-en="Lunar Calendar · 30 min · €25">Calendario Lunar · 30 min · 25 €</option>
+              <option value="astro" data-es="Consulta Astrológica · 60 min · 50 €" data-en="Astrology Consultation · 60 min · €50">Consulta Astrológica · 60 min · 50 €</option>
+            </select>
+          </label>
+        </div>
+        <label class="form-field">
+          <span data-es="Mensaje &lt;em&gt;(opcional)&lt;/em&gt;" data-en="Message &lt;em&gt;(optional)&lt;/em&gt;">Mensaje <em>(opcional)</em></span>
+          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente qué te trae…" data-ph-es="Cuéntame brevemente qué te trae…" data-ph-en="Tell me briefly what brings you here…"></textarea>
+        </label>
+        <p class="form-error" id="form-error" hidden data-es="Revisa los campos marcados: faltan datos o el email no es válido." data-en="Check the highlighted fields: something is missing or the email is not valid.">Revisa los campos marcados: faltan datos o el email no es válido.</p>
+        <button class="btn btn--wide" type="submit" data-es="Enviar solicitud" data-en="Send request">Enviar solicitud</button>
+      </form>
+      <div class="booking__success" id="booking-success" hidden>
+        <div class="booking__success-symbol">✓</div>
+        <h3 data-es="Solicitud enviada" data-en="Request sent">Solicitud enviada</h3>
+        <p data-es="Gracias por escribir. Te responderé en menos de 24 h con los próximos horarios disponibles." data-en="Thank you for writing. I will reply within 24 h with the next available slots.">Gracias por escribir. Te responderé en menos de 24 h con los próximos horarios disponibles.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    <span class="site-nav__logo">✶</span> AETHEREA
+  </div>
+  <p class="site-footer__tag" data-es="Lecturas e interpretación bajo un cielo en movimiento" data-en="Readings and interpretation under a moving sky">Lecturas e interpretación bajo un cielo en movimiento</p>
+  <div class="site-footer__links">
+    <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="#pilares" data-es="Pilares" data-en="Pillars">Pilares</a>
+    <a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a>
+    <a href="#reservar" data-es="Agenda" data-en="Booking">Agenda</a>
+  </div>
+  <p class="site-footer__disclaimer" data-es="Las lecturas son de carácter orientativo e interpretativo. No sustituyen asesoramiento profesional médico, legal o financiero." data-en="Readings are for guidance and interpretation only. They do not replace professional medical, legal or financial advice.">Las lecturas son de carácter orientativo e interpretativo. No sustituyen asesoramiento profesional médico, legal o financiero.</p>
+  <p class="site-footer__copy">© 2026 AETHEREA</p>
+</footer>
+
+<script src="js/config.js" defer></script>
+<script src="js/orbit-controls.js" defer></script>
+<script src="js/noise.js" defer></script>
+<script src="js/planets-data.js" defer></script>
+<script src="js/textures.js" defer></script>
+<script src="js/scene-objects.js" defer></script>
+<script src="js/hero-scene.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/zodiac.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/form.js" defer></script>
+<script src="js/sign-modal.js" defer></script>
+<script src="js/moon-info.js" defer></script>
+<script src="js/sign-calc.js" defer></script>
+<script src="js/whatsapp.js" defer></script>
+<script src="js/analytics.js" defer></script>
+<script src="js/reveal.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ============================================
+   process.css — el proceso en tres pasos
+   ============================================ */
+
+.process__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.process__step {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  background: rgba(var(--panel-rgb), 0.45);
+}
+
+.process__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 34px;
+  line-height: 1;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.process__step h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.process__step p {
+  font-size: 14px;
+  color: var(--color-text-dim);
+}

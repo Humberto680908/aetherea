@@ -1,0 +1,86 @@
+/* ============================================
+   zodiac.css — carrusel infinito de los 12 signos
+   (zodiac.js genera los items duplicados)
+   ============================================ */
+
+.zodiac {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  background: rgba(var(--panel-rgb), 0.35);
+}
+
+.zodiac__viewport {
+  overflow: hidden;
+}
+
+.zodiac__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: zodiac-scroll 30s linear infinite;
+}
+
+.zodiac__viewport:hover .zodiac__track {
+  animation-play-state: paused;
+}
+
+@keyframes zodiac-scroll {
+  to { transform: translateX(-50%); }
+}
+
+/* Los items son <button>: se resetea su estilo nativo y se hacen clicables
+   (sign-modal.js abre la ficha del signo) */
+.zodiac-item {
+  display: block;
+  font: inherit;
+  color: inherit;
+  min-width: 148px;
+  text-align: center;
+  padding: 18px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: rgba(var(--panel-rgb), 0.5);
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.zodiac-item:hover {
+  border-color: rgba(var(--accent-rgb), 0.5);
+  transform: translateY(-3px);
+}
+
+.zodiac-item__glyph,
+.zodiac-item__name,
+.zodiac-item__dates {
+  display: block;
+}
+
+/* "Apple Symbols"/"Segoe UI Symbol" tienen versión de texto de los
+   glifos zodiacales; sin esto el navegador los pinta como emoji. */
+.zodiac-item__glyph {
+  font-family: 'Apple Symbols', 'Segoe UI Symbol', 'Noto Sans Symbols', sans-serif;
+  font-size: 24px;
+  color: var(--color-gold);
+}
+
+.zodiac-item__name {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  margin-top: 8px;
+  color: var(--color-text);
+}
+
+.zodiac-item__dates {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-top: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zodiac__track { animation: none; }
+  .zodiac__viewport { overflow-x: auto; }
+}

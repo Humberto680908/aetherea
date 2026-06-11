@@ -1,0 +1,126 @@
+/* ============================================
+   discover.css — calculadora de signo solar
+   (el lead magnet: sign-calc.js)
+   ============================================ */
+
+.discover__panel {
+  max-width: 640px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.06), rgba(var(--panel-rgb), 0.7));
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 48px);
+  text-align: center;
+}
+
+.discover__panel .section-head {
+  margin-bottom: 24px;
+}
+
+.discover__sub {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--color-text-dim);
+}
+
+.discover__form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.discover__form input[type="date"] {
+  color-scheme: dark;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 11px 18px;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.discover__form input[type="date"]:focus {
+  border-color: rgba(var(--accent-rgb), 0.6);
+}
+
+/* Resultado */
+
+.sign-result {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.sign-result__glyph {
+  font-family: 'Apple Symbols', 'Segoe UI Symbol', 'Noto Sans Symbols', sans-serif;
+  font-size: 42px;
+  line-height: 1;
+  color: var(--color-gold);
+  text-shadow: 0 0 26px rgba(212, 176, 120, 0.5);
+}
+
+.sign-result__name {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.sign-result__name strong {
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.sign-result__meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 380px;
+  margin: 20px auto 0;
+}
+
+.sign-result__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.sign-result__value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.sign-result__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-dim);
+  max-width: 460px;
+  margin: 16px auto 0;
+}
+
+/* El upsell hacia el Big Three completo */
+.sign-result__upsell {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-gold);
+  max-width: 460px;
+  margin: 18px auto 0;
+}
+
+.sign-result__upsell strong {
+  font-weight: 400;
+}
+
+.sign-result__cta {
+  margin-top: 22px;
+}

@@ -1,0 +1,147 @@
+/* ============================================
+   moon.css — las cuatro fases lunares
+   ============================================ */
+
+.moon {
+  text-align: center;
+}
+
+.moon__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+/* Fase lunar real de hoy (moon-info.js) */
+.moon__today {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--color-gold);
+  margin-top: 16px;
+}
+
+.moon__hint {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-top: 8px;
+}
+
+.moon-phase {
+  padding: 26px 18px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: rgba(var(--panel-rgb), 0.45);
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.moon-phase:hover {
+  border-color: rgba(var(--accent-rgb), 0.5);
+  transform: translateY(-3px);
+}
+
+.moon-phase.is-active {
+  border-color: var(--color-accent);
+  background: rgba(var(--accent-rgb), 0.07);
+}
+
+/* Panel desplegable con el detalle de la fase (moon-info.js) */
+.moon-detail {
+  margin-top: 24px;
+  padding: 28px clamp(20px, 5vw, 48px);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  border-radius: var(--radius-md);
+  background: rgba(var(--panel-rgb), 0.6);
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Próxima fecha real en cada tarjeta (moon-info.js) */
+.moon-phase__next {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: 12px;
+}
+
+.moon-detail__title {
+  font-size: 22px;
+}
+
+/* Próximas 3 fechas en el panel de detalle */
+.moon-detail__dates {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: 8px;
+}
+
+.moon-detail__meaning {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-dim);
+  margin-top: 12px;
+}
+
+.moon-detail__practice {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--color-gold);
+  margin-top: 14px;
+}
+
+.moon-detail__fact {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+  margin-top: 14px;
+}
+
+.moon-detail__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+.moon-detail__cta span:last-child {
+  transition: transform 0.3s;
+}
+
+.moon-detail__cta:hover span:last-child {
+  transform: translateX(6px);
+}
+
+.moon-phase__icon {
+  font-size: 38px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.moon-phase h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.moon-phase p {
+  font-size: 13px;
+  color: var(--color-text-dim);
+}

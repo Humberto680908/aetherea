@@ -1,0 +1,153 @@
+/* ============================================
+   booking.css — formulario de reserva
+   ============================================ */
+
+.booking__panel {
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(var(--panel-rgb), 0.7);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 48px);
+  backdrop-filter: blur(8px);
+}
+
+.booking__panel .section-head {
+  margin-bottom: 28px;
+}
+
+.booking__note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--color-text-dim);
+}
+
+/* Urgencia honesta: la próxima luna llena real (moon-info.js) */
+.booking__urgency {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  border-radius: var(--radius-sm);
+  background: rgba(var(--accent-rgb), 0.07);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.booking__urgency:empty {
+  display: none;
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.form-field em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.form-field input[type="date"] {
+  color-scheme: dark;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.25s, background 0.25s;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(var(--accent-rgb), 0.6);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.form-field select option {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Campo inválido (form.js) */
+.form-field.is-invalid input,
+.form-field.is-invalid select,
+.form-field.is-invalid input[type="date"] {
+  border-color: rgba(var(--accent-rgb), 0.8);
+  background: rgba(var(--accent-rgb), 0.06);
+}
+
+.form-error {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+/* Confirmación tras enviar (form.js) */
+.booking__success {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.booking__success-symbol {
+  font-size: 36px;
+  color: #7fc98a;
+  margin-bottom: 16px;
+  text-shadow: 0 0 30px rgba(127, 201, 138, 0.5);
+}
+
+.booking__success h3 {
+  margin-bottom: 12px;
+}
+
+.booking__success p {
+  color: var(--color-text-dim);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+}

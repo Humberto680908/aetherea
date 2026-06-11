@@ -1,0 +1,48 @@
+/* ============================================
+   testimonials.css — citas de clientes
+   ============================================ */
+
+/* Nota de honestidad: los testimonios son ilustrativos */
+.testimonials__note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-top: 12px;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 26px 24px;
+  border-left: 2px solid rgba(var(--accent-rgb), 0.5);
+  background: rgba(var(--panel-rgb), 0.45);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.testimonial p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-text-dim);
+}
+
+.testimonial footer {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 860px) {
+  .testimonials__grid { grid-template-columns: 1fr; }
+}
